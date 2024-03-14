@@ -681,11 +681,14 @@ private:
      * (opposed to the first triangle)
      * @return index of a newly added split vertex
      */
+public:
     VertInd splitFixedEdgeAt(
         const Edge& edge,
         const V2d<T>& splitVert,
         const TriInd iT,
         const TriInd iTopo);
+
+private:
     /**
      * Flag triangle as dummy
      * @note Advanced method for manually modifying the triangulation from
@@ -725,7 +728,11 @@ private:
         VertInd superGeomVertCount,
         V2d<T> boxMin,
         V2d<T> boxMax);
+
+public:
     std::pair<TriInd, TriInd> edgeTriangles(VertInd a, VertInd b) const;
+
+private:
     bool hasEdge(VertInd a, VertInd b) const;
     void setAdjacentTriangle(const VertInd v, const TriInd t);
     void pivotVertexTriangleCW(VertInd v);
